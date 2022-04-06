@@ -9,9 +9,6 @@ Vue.createApp({
         }
     },
     methods: {
-        saludar(nombre) {
-            return 'Alo!!!!!' + nombre;
-        },
         calculate() {
             this.showTextLength = this.textInput;
         }
