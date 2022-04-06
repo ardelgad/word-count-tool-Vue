@@ -1,9 +1,20 @@
-let button = document.getElementById('btn');
+Vue.createApp({
+    data() {
+        return {
+            // Estado de la app
+            test: '<strong>Hola!</strong>',
+            nuevoId: 6,
+            textInput: '',
+            showTextLength: ''
+        }
+    },
+    methods: {
+        saludar(nombre) {
+            return 'Alo!!!!!' + nombre;
+        },
+        calculate() {
+            this.showTextLength = this.textInput;
+        }
+    }
 
-button.addEventListener('click', function(){
-    let word = document.getElementById('str').value;
-    let count = word.length;
-    let outputDiv = document.getElementById('output');
-
-    outputDiv.innerHTML = `<h1>${count}</h1>`
-});
+}).mount('#app')
